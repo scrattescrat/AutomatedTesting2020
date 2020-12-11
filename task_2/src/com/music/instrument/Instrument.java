@@ -23,7 +23,7 @@ public class Instrument {
     }
 
     public void setPrice(int price2) {
-        this.price = price2;
+        price = price2;
     }
 
     public int getPrice() {
