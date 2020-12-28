@@ -3,6 +3,7 @@ package com.music.instrument;
 public abstract class StringedInstrument implements Instrument{
     private String manufacturer;
     private int price;
+    public final String TYPE = "STRINGED_INSTRUMENT_TYPE";
 
     public StringedInstrument() {
 
@@ -27,6 +28,11 @@ public abstract class StringedInstrument implements Instrument{
 
     public int getPrice() {
         return price;
+    }
+
+    public final void printManufacturer(){
+        System.out.println("===Manufacturer===");
+        System.out.println("        " + manufacturer);
     }
 
     @Override

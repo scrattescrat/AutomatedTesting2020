@@ -1,6 +1,6 @@
 package com.music.instrument;
 
-public class Violin extends StringedInstrument {
+public final class Violin extends StringedInstrument {
 
     public Violin() {
 

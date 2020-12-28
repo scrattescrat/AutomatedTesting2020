@@ -1,6 +1,6 @@
 package com.music.instrument;
 
-public class Synthesizer extends KeyboardInstrument {
+public final class Synthesizer extends KeyboardInstrument {
     private boolean electronic;
 
     public Synthesizer() {

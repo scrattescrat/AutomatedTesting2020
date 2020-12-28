@@ -1,6 +1,6 @@
 package com.music.instrument;
 
-public class Saxophone extends WindInstrument {
+public final class Saxophone extends WindInstrument {
 
     public Saxophone() {
 

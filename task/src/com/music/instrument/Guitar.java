@@ -1,6 +1,6 @@
 package com.music.instrument;
 
-public class Guitar extends StringedInstrument {
+public final class Guitar extends StringedInstrument {
     private String guitarType;
 
     public Guitar() {

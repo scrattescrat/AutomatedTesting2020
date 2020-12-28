@@ -1,6 +1,6 @@
 package com.music.instrument;
 
-public class Piano extends KeyboardInstrument {
+public final class Piano extends KeyboardInstrument {
     private String colour;
 
     public Piano() {

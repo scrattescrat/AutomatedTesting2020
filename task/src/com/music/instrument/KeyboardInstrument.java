@@ -3,6 +3,7 @@ package com.music.instrument;
 public abstract class KeyboardInstrument implements Instrument{
     private String manufacturer;
     private int price;
+    public final String TYPE = "KEYBOARD_INSTRUMENT_TYPE";
 
     public KeyboardInstrument() {
     }
@@ -26,6 +27,11 @@ public abstract class KeyboardInstrument implements Instrument{
 
     public int getPrice() {
         return price;
+    }
+
+    public final void printManufacturer(){
+        System.out.println("===Manufacturer===");
+        System.out.println("        " + manufacturer);
     }
 
     @Override
