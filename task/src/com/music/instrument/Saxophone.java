@@ -15,4 +15,10 @@ public final class Saxophone extends WindInstrument {
         System.out.println("Saxophone plays");
     }
 
+    @Override
+    public String toString() {
+        return "Saxophone{" +
+                "TYPE='" + TYPE + '\'' +
+                '}';
+    }
 }

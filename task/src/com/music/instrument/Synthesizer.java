@@ -34,4 +34,12 @@ public final class Synthesizer extends KeyboardInstrument {
         super.printFields();
         System.out.println("Electronic: " + electronic);
     }
+
+    @Override
+    public String toString() {
+        return "Synthesizer{" +
+                "TYPE='" + TYPE + '\'' +
+                ", electronic=" + electronic +
+                '}';
+    }
 }

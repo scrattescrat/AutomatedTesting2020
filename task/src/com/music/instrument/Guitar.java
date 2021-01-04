@@ -38,4 +38,12 @@ public final class Guitar extends StringedInstrument {
         super.printFields();
         System.out.println("Guitar type: " + guitarType);
     }
+
+    @Override
+    public String toString() {
+        return "Guitar{" +
+                "guitarType='" + guitarType + '\'' +
+                ", TYPE='" + TYPE + '\'' +
+                '}';
+    }
 }

@@ -15,4 +15,10 @@ public final class Violin extends StringedInstrument {
         System.out.println("Violin plays");
     }
 
+    @Override
+    public String toString() {
+        return "Violin{" +
+                "TYPE='" + TYPE + '\'' +
+                '}';
+    }
 }

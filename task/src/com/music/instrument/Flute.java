@@ -13,4 +13,11 @@ public final class Flute extends WindInstrument {
     public void play() {
         System.out.println("Flute plays");
     }
+
+    @Override
+    public String toString() {
+        return "Flute{" +
+                "TYPE='" + TYPE + '\'' +
+                '}';
+    }
 }

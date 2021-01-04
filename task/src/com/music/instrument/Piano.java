@@ -33,4 +33,12 @@ public final class Piano extends KeyboardInstrument {
         super.printFields();
         System.out.println("Colour: " + colour);
     }
+
+    @Override
+    public String toString() {
+        return "Piano{" +
+                "TYPE='" + TYPE + '\'' +
+                ", colour='" + colour + '\'' +
+                '}';
+    }
 }

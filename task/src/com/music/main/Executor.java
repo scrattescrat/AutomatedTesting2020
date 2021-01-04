@@ -17,35 +17,49 @@ public class Executor {
         WindInstrument saxophone = new Saxophone("Buffet Crampon", 5600);
         WindInstrument flute = new Flute("Roosen", 2145);
 
-//        Orhester orhester1 = new Orhester(piano, flute, guitar);
-//        Orhester orhester2 = new Orhester(synthesizer, saxophone, violin);
-//
-//        System.out.println("=== Orhester1 plays ===");
-//        orhester1.playConcert();
-//
-//        System.out.println("=== Orhester2 plays ===");
-//        orhester2.playConcert();
+        Orhester orhester = new Orhester();
 
+        orhester.addWindInstrument(flute);
+        orhester.addWindInstrument(flute);
+        orhester.addWindInstrument(flute);
+        orhester.addWindInstrument(saxophone);
 
-        System.out.println("=== Types ===");
-        System.out.println(piano.TYPE);
-        System.out.println(flute.TYPE);
-        System.out.println(guitar.TYPE);
-        piano.printManufacturer();
-        flute.printManufacturer();
-        guitar.printManufacturer();
+        orhester.addKeyboardInstrument(piano);
+        orhester.addKeyboardInstrument(piano);
+        orhester.addKeyboardInstrument(synthesizer);
+
+        orhester.addUniqueInstrument(violin);
+        orhester.addUniqueInstrument(violin);
+        orhester.addUniqueInstrument(guitar);
+
+        orhester.printInfo();
 
         System.out.println("Enter number from 1 to 6");
-        Scanner scan = new Scanner(System.in);
-        int number = scan.nextInt();
+        Scanner scan1 = new Scanner(System.in);
+        int number = scan1.nextInt();
 
         Creator creator = new Creator();
-
         Instrument instrument = creator.createInstrument(number);
-        if (instrument != null){
-            instrument.printFields();
-            instrument.play();
+
+        System.out.println("*****");
+        System.out.println("Do you want add the Instrument to UniqueStorage? Y/N");
+        Scanner scan2 = new Scanner(System.in);
+        String answer = scan2.nextLine();
+        if (answer.equals("Y")) {
+           orhester.addUniqueInstrument(instrument);
         }
+        System.out.println("new UniqueStorage size: " + orhester.getUniqueStorage().size());
+
+        System.out.println("Enter number of JazzInstrument to delete from 0 to "
+                + (orhester.getJazzMelody().size()-1));
+        int numToDelete = scan1.nextInt();
+        if (numToDelete >= 0 && numToDelete <= orhester.getJazzMelody().size() - 1) {
+            orhester.deleteWindInstrument(numToDelete);
+        }
+        System.out.println("new size: " + orhester.getJazzMelody().size());
+        orhester.printInfo();
+
+
 
     }
 
