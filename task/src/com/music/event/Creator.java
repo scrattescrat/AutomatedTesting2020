@@ -4,7 +4,7 @@ import com.music.instrument.*;
 
 public class Creator {
 
-    public Instrument createInstrument(int number){
+    public Instrument createInstrument(int number) throws MyException {
         Instrument instrument;
         switch (number){
             case 1:
@@ -26,8 +26,9 @@ public class Creator {
                 instrument = new Flute("Roosen", 2145);
                 break;
             default:
-                System.out.println("Wrong number");
-                instrument = null;
+//                System.out.println("Wrong number");
+//                instrument = null;
+                throw new MyException("Exception: Wrong number");
         }
         return instrument;
 

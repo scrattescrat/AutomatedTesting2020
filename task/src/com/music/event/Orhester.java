@@ -76,7 +76,12 @@ public class Orhester {
         System.out.println("=====Unique Instrument=====");
 
         for (Instrument instrument : uniqueStorage) {
-            System.out.println(instrument.toString());
+
+            try {
+                System.out.println(instrument.toString());
+            } catch (NullPointerException e) {
+                e.printStackTrace();
+            }
         }
     }
 

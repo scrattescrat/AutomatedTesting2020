@@ -1,6 +1,7 @@
 package com.music.main;
 
 import com.music.event.Creator;
+import com.music.event.MyException;
 import com.music.event.Orhester;
 import com.music.instrument.*;
 
@@ -39,7 +40,14 @@ public class Executor {
         int number = scan1.nextInt();
 
         Creator creator = new Creator();
-        Instrument instrument = creator.createInstrument(number);
+        Instrument instrument = null;
+        try {
+            instrument = creator.createInstrument(number);
+        } catch (MyException e) {
+            e.printStackTrace();
+        } finally {
+            System.out.println("Instrument is:" + instrument);
+        }
 
         System.out.println("*****");
         System.out.println("Do you want add the Instrument to UniqueStorage? Y/N");
@@ -49,6 +57,7 @@ public class Executor {
            orhester.addUniqueInstrument(instrument);
         }
         System.out.println("new UniqueStorage size: " + orhester.getUniqueStorage().size());
+        orhester.printInfo();
 
         System.out.println("Enter number of JazzInstrument to delete from 0 to "
                 + (orhester.getJazzMelody().size()-1));
