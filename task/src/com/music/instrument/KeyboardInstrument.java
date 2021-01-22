@@ -44,5 +44,7 @@ public abstract class KeyboardInstrument implements Instrument{
         System.out.println("Manufacturer: " + manufacturer);
         System.out.println("Price: " + price);
     }
+
+
 }
 

@@ -1,8 +1,6 @@
 package com.music.event;
 
-import com.music.instrument.Instrument;
-import com.music.instrument.KeyboardInstrument;
-import com.music.instrument.WindInstrument;
+import com.music.instrument.*;
 
 import java.util.*;
 
@@ -60,29 +58,30 @@ public class Orhester {
     }
 
 
+
     public void printInfo() {
-        System.out.println("=====Instrument=====");
+//        System.out.println("=====Instrument=====");
+//
+//        for (WindInstrument jazzInstrument : jazzMelody) {
+//            System.out.println(jazzInstrument.toString());
+//        }
 
-        for (WindInstrument jazzInstrument : jazzMelody) {
-            System.out.println(jazzInstrument.toString());
-        }
-
-        System.out.println("=====KeyboardInstrument=====");
+        System.out.println("=====BAND=====");
 
         for (Object keyboardInstrument : band) {
             System.out.println(keyboardInstrument.toString());
         }
 
-        System.out.println("=====Unique Instrument=====");
-
-        for (Instrument instrument : uniqueStorage) {
-
-            try {
-                System.out.println(instrument.toString());
-            } catch (NullPointerException e) {
-                e.printStackTrace();
-            }
-        }
+//        System.out.println("=====Unique Instrument=====");
+//
+//        for (Instrument instrument : uniqueStorage) {
+//
+//            try {
+//                System.out.println(instrument.toString());
+//            } catch (NullPointerException e) {
+//                e.printStackTrace();
+//            }
+//        }
     }
 
 }

@@ -4,7 +4,10 @@ import com.music.event.Creator;
 import com.music.event.MyException;
 import com.music.event.Orhester;
 import com.music.instrument.*;
+import com.music.menu.Menu;
+import com.music.menu.OrchesterComposition;
 import com.music.utils.ReadingFromFile;
+import com.music.utils.WRFromProperty;
 import com.music.utils.WrittingToFile;
 import jdk.jshell.execution.Util;
 
@@ -13,14 +16,16 @@ import java.util.Scanner;
 
 public class Executor {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws MyException {
+        Menu menu = new Menu();
+        menu.menuSelection();
 
-        KeyboardInstrument piano = new Piano("Steinway & Sons", 75000,"white");
-        KeyboardInstrument synthesizer = new Synthesizer("Yamaha", 4755, true);
-        StringedInstrument guitar = new Guitar("Hohner", 490, "Acoustic");
-        StringedInstrument violin = new Violin("Cremona", 1750);
-        WindInstrument saxophone = new Saxophone("Buffet Crampon", 5600);
-        WindInstrument flute = new Flute("Roosen", 2145);
+//        KeyboardInstrument piano = new Piano("Steinway & Sons", 75000,"white");
+//        KeyboardInstrument synthesizer = new Synthesizer("Yamaha", 4755, true);
+//        StringedInstrument guitar = new Guitar("Hohner", 490, "Acoustic");
+//        StringedInstrument violin = new Violin("Cremona", 1750);
+//        WindInstrument saxophone = new Saxophone("Buffet Crampon", 5600);
+//        WindInstrument flute = new Flute("Roosen", 2145);
 
 //        Orhester orhester = new Orhester();
 //
@@ -72,16 +77,25 @@ public class Executor {
 //        System.out.println("new size: " + orhester.getJazzMelody().size());
 //        orhester.printInfo();
 
-        ReadingFromFile.readFromFile();
+//        ReadingFromFile.readFromFile();
+//
+//
+//        WrittingToFile.writeToFile();
 
-        try {
-            WrittingToFile.writeToFile();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+//        WRFromProperty wrFromProperty = new WRFromProperty();
+//        wrFromProperty.writeProperty("info.properties", "pianoPrice", "3500");
+//
+//        String getProperty = wrFromProperty.getProperty("info.properties", "guitarPrice");
+//        System.out.println(getProperty);
 
-//        ReadingFromFile.getPropertyValue();
-//        System.out.println("Instrument: " + new Util().getPropertyValue);
+
+
+
+
+
+
+
+
 
 
     }
